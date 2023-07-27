@@ -1,4 +1,5 @@
 # Neuracanvas
+NeuraCanvas is an e-commerce website for selling digital art products.
 
 ## Requirements Analysis
 1. <strong>Product Catalog</strong>: A page that displays all products, categorized by type. Each product will have a thumbnail image, title, price, and a button to add the product to the shopping cart.
