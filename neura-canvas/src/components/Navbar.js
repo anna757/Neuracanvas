@@ -1,10 +1,12 @@
-import LinkButton from './LinkButton';
-import React from 'react';
+import React, { useContext } from 'react';
 import { AppBar, Toolbar, Typography, Button, Grid, Box } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LinkButton from './LinkButton';
+import { AuthContext } from '../services/AuthContext';
+const Navbar = React.memo(() => {
+  const { isLoggedIn, logOut } = useContext(AuthContext);
 
-const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
@@ -23,7 +25,10 @@ const Navbar = () => {
                 <LinkButton to="/cart" text="Cart" />
               </Button>
               <Button color="inherit" startIcon={<AccountCircleIcon />}>
-                <LinkButton to="/account" text="Account" />
+                {isLoggedIn
+                  ? <LinkButton onClick={logOut} to="/" text="Logout" />
+                  : <LinkButton to="/login" text="Login" />
+                }
               </Button>
             </Box>
           </Grid>
@@ -31,6 +36,6 @@ const Navbar = () => {
       </Toolbar>
     </AppBar>
   );
-};
+});
 
 export default Navbar;
