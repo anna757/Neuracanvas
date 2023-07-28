@@ -1,6 +1,6 @@
+import LinkButton from './LinkButton';
 import React from 'react';
 import { AppBar, Toolbar, Typography, Button, Grid, Box } from '@mui/material';
-import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
@@ -11,29 +11,19 @@ const Navbar = () => {
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Typography variant="h6">
-              <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                NeuraCanvas
-              </Link>
+              <LinkButton to="/" text="NeuraCanvas" />
             </Typography>
           </Grid>
           <Grid item>
-            <Button color="inherit">
-              <Link to="/catalog" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                Catalog
-              </Link>
-            </Button>
+            <LinkButton to="/catalog" text="Catalog" />
           </Grid>
           <Grid item>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Button color="inherit" startIcon={<ShoppingCartIcon />}>
-                <Link to="/cart" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                  Cart
-                </Link>
+                <LinkButton to="/cart" text="Cart" />
               </Button>
               <Button color="inherit" startIcon={<AccountCircleIcon />}>
-                <Link to="/account" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                  Account
-                </Link>
+                <LinkButton to="/account" text="Account" />
               </Button>
             </Box>
           </Grid>

@@ -1,16 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HomePage from './components/HomePage';
-import CatalogPage from './components/CatalogPage';
-import LoginPage from './components/LoginPage';
-import CartPage from './components/CartPage';
-import DetailsPage from './components/DetailsPage';
-import CheckoutPage from './components/CheckoutPage';
-import RegisterPage from './components/RegisterPage';
-import UserProfilePage from './components/UserProfilePage';
+import HomePage from './pages/HomePage';
+import CatalogPage from './pages/CatalogPage';
+import LoginPage from './pages/LoginPage';
+import CartPage from './pages/CartPage';
+import DetailsPage from './pages/DetailsPage';
+import CheckoutPage from './pages/CheckoutPage';
+import RegisterPage from './pages/RegisterPage';
+import UserProfilePage from './pages/UserProfilePage';
 
-// Import the components related to the routes here
 
 const App = () => {
   return (
