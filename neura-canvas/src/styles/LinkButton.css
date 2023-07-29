@@ -2,3 +2,13 @@
     color: inherit;
     text-decoration: inherit;
   }
+
+
+.active{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#logo.active {
+  text-decoration: none;
+}

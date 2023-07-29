@@ -13,11 +13,14 @@ const Navbar = React.memo(() => {
         <Grid container justifyContent="space-between" alignItems="center">
           <Grid item>
             <Typography variant="h6">
-              <LinkButton to="/" text="NeuraCanvas" />
+              <LinkButton to="/" text="NeuraCanvas" id='logo'/>
             </Typography>
           </Grid>
           <Grid item>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2}}>
+            <LinkButton to="/" text="Home" />
             <LinkButton to="/catalog" text="Catalog" />
+            </Box>
           </Grid>
           <Grid item>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>

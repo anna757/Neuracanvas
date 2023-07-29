@@ -13,7 +13,7 @@ import '../styles/LinkButton.css';
  */
 const LinkButton = React.memo(({ to, text }) => {
     return (
-        <NavLink to={to} activeclassname="active-link" className={'linkButton'}>
+        <NavLink to={to} className={'linkButton'}>
             <Typography variant="h6">
                 {text}
             </Typography>
