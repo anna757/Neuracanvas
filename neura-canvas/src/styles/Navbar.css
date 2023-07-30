@@ -5,7 +5,6 @@
     button {
         background-color: #EBF5FB;
         color: #4B86B4;
-
         &:hover {
             background-color: #ADCBE3;
         }

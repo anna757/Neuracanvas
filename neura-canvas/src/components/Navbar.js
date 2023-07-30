@@ -27,15 +27,9 @@ const Navbar = React.memo(() => {
           </Grid>
           <Grid item>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Button color='primary' startIcon={<ShoppingCartIcon />} component={Link} to='/cart'>
-                <LinkButton text='Cart' />
-              </Button>
-
-              <Button color='primary' startIcon={<AccountCircleIcon />}>
-                {isLoggedIn
-                  ? <LinkButton onClick={logOut} to='/' text='Logout' />
-                  : <LinkButton to='/login' text='Login' />
-                }
+            <Button color='primary' startIcon={<ShoppingCartIcon />} component={Link} to='/cart'>Cart</Button>
+              <Button color='primary' startIcon={<AccountCircleIcon />} component={Link} to={isLoggedIn ? '/' : '/login'} onClick={isLoggedIn ? logOut : null}>
+                {isLoggedIn ? 'Logout' : 'Login'}
               </Button>
             </Box>
           </Grid>
