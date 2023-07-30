@@ -1,34 +1,20 @@
 .navbar {
     background-color: #EBF5FB;
-    color: #2A4D69;
-
-    button {
-        background-color: #EBF5FB;
-        color: #4B86B4;
-        &:hover {
-            background-color: #ADCBE3;
-        }
-    }
-
-    .active {
-        text-decoration: underline;
-        font-weight: bold;
-    }
 }
 
 #logo {
     max-height: 60px;
     padding: 10px 0;
-    button:hover {
-        background-color: none;
-    }
 }
 
 .LinkButton {
-    color: #2A4D69;
     text-decoration: none;
 
-    &:hover {
+    :hover {
         color: #4B86B4;
     }
+}
+
+.LinkButton.active {
+    color: #4B86B4;
 }

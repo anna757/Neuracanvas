@@ -8,7 +8,6 @@ import CartPage from './pages/CartPage';
 import DetailsPage from './pages/DetailsPage';
 import CheckoutPage from './pages/CheckoutPage';
 import RegisterPage from './pages/RegisterPage';
-import UserProfilePage from './pages/UserProfilePage';
 
 const AppRoutes = () => {
   const { isLoggedIn } = useContext(AuthContext);
@@ -19,10 +18,9 @@ const AppRoutes = () => {
       <Route path="/catalog" element={<CatalogPage />} />
       <Route path="/product/:id" element={<DetailsPage />} />
       <Route path="/cart" element={isLoggedIn ? <CartPage /> : <LoginPage />} />
-      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/checkout" element={isLoggedIn ? <CheckoutPage /> : <LoginPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/userprofile" element={isLoggedIn ? <UserProfilePage /> : <LoginPage />} />
     </Routes>
   );
 };

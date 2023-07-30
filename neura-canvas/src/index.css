@@ -12,10 +12,3 @@ code {
     monospace;
 }
 
-:root {
-  --background-color: #EBF5FB;
-  --color: #2A4D69;
-  --button-background-color: #EBF5FB;
-  --button-color: #4B86B4;
-  --button-hover-background-color: #ADCBE3;
-}
