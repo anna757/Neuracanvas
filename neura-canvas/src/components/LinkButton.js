@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Typography } from '@mui/material';
-import '../styles/LinkButton.css';
 
 /**
  * LinkButton component.
@@ -13,7 +12,7 @@ import '../styles/LinkButton.css';
  */
 const LinkButton = React.memo(({ to, text }) => {
     return (
-        <NavLink to={to} className={'linkButton'}>
+        <NavLink to={to} className={'LinkButton'}>
             <Typography variant="h6">
                 {text}
             </Typography>
