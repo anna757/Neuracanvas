@@ -3,13 +3,13 @@
 }
 
 #logo {
-    max-height: 60px;
+    max-height: 40px;
     padding: 10px 0;
 }
 
 .LinkButton {
     text-decoration: none;
-
+    color: #2A4D69;
     :hover {
         color: #4B86B4;
     }
