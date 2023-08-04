@@ -1,6 +1,3 @@
-html {
-  background: #f0f0f0;
-}
 
 body {
   margin: 0;
@@ -17,3 +14,9 @@ code {
     monospace;
 }
 
+:root {
+  --primary-color: #2A4D69;
+  --secondary-color: #4B86B4;
+  --accent-color: #ADCBE3;
+  --neutral-color: #EBF5FB;
+}

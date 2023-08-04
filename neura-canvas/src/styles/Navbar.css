@@ -10,9 +10,11 @@
 .LinkButton {
     text-decoration: none;
     color: #2A4D69;
-    :hover {
-        color: #4B86B4;
-    }
+
+}
+
+.LinkButton :hover {
+    color: #4B86B4;
 }
 
 .LinkButton.active {

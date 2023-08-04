@@ -2,769 +2,769 @@
     {
         "id": 1,
         "name": "Modern Santa",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/modernSanta.jpg",
-        "alt": "Modern Santa - digitalArt"
+        "alt": "Modern Santa - Digital Art"
     },
     {
         "id": 2,
         "name": "Robot Flowers",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/robotFlowers.jpg",
-        "alt": "Robot Flowers - digitalArt"
+        "alt": "Robot Flowers - Digital Art"
     },
     {
         "id": 3,
         "name": "Ocean Sunset",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/oceanSunset.jpg",
-        "alt": "Ocean Sunset - digitalArt"
+        "alt": "Ocean Sunset - Digital Art"
     },
     {
         "id": 4,
         "name": "Panorama Forest",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/panoramaForest.png",
-        "alt": "Panorama Forest - digitalArt"
+        "alt": "Panorama Forest - Digital Art"
     },
     {
         "id": 5,
         "name": "Wolf",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/wolf.png",
-        "alt": "Wolf - digitalArt"
+        "alt": "Wolf - Digital Art"
     },
     {
         "id": 6,
         "name": "Piano Art",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/pianoArt.jpg",
-        "alt": "Piano Art - digitalArt"
+        "alt": "Piano Art - Digital Art"
     },
     {
         "id": 7,
         "name": "Galaxy",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/galaxy.jpg",
-        "alt": "Galaxy - digitalArt"
+        "alt": "Galaxy - Digital Art"
     },
     {
         "id": 8,
         "name": "Medieval Castle",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/medievalCastle.jpg",
-        "alt": "Medieval Castle - digitalArt"
+        "alt": "Medieval Castle - Digital Art"
     },
     {
         "id": 9,
         "name": "Castle Portal",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/castlePortal.jpg",
-        "alt": "Castle Portal - digitalArt"
+        "alt": "Castle Portal - Digital Art"
     },
     {
         "id": 10,
         "name": "Universe",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/universe.jpg",
-        "alt": "Universe - digitalArt"
+        "alt": "Universe - Digital Art"
     },
     {
         "id": 11,
         "name": "Beautiful Pond View",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/beautifulPondView.jpg",
-        "alt": "Beautiful Pond View - digitalArt"
+        "alt": "Beautiful Pond View - Digital Art"
     },
     {
         "id": 12,
         "name": "Boy And Dragon",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/boyAndDragon.jpg",
-        "alt": "Boy And Dragon - digitalArt"
+        "alt": "Boy And Dragon - Digital Art"
     },
     {
         "id": 13,
         "name": "Robot Friends",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/robotFriends.jpg",
-        "alt": "Robot Friends - digitalArt"
+        "alt": "Robot Friends - Digital Art"
     },
     {
         "id": 14,
         "name": "Cat King",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/catKing.jpg",
-        "alt": "Cat King - digitalArt"
+        "alt": "Cat King - Digital Art"
     },
     {
         "id": 15,
         "name": "Futuristic City",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/futuristicCity.png",
-        "alt": "Futuristic City - digitalArt"
+        "alt": "Futuristic City - Digital Art"
     },
     {
         "id": 16,
         "name": "Princess",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/princess.jpg",
-        "alt": "Princess - digitalArt"
+        "alt": "Princess - Digital Art"
     },
     {
         "id": 17,
         "name": "Planets",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/planets.jpg",
-        "alt": "Planets - digitalArt"
+        "alt": "Planets - Digital Art"
     },
     {
         "id": 18,
         "name": "Earthquake",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/earthquake.jpg",
-        "alt": "Earthquake - digitalArt"
+        "alt": "Earthquake - Digital Art"
     },
     {
         "id": 19,
         "name": "Winter Season",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/winterSeason.jpg",
-        "alt": "Winter Season - digitalArt"
+        "alt": "Winter Season - Digital Art"
     },
     {
         "id": 20,
         "name": "Foxes",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/foxes.jpg",
-        "alt": "Foxes - digitalArt"
+        "alt": "Foxes - Digital Art"
     },
     {
         "id": 21,
         "name": "Cowboy",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/cowboy.jpg",
-        "alt": "Cowboy - digitalArt"
+        "alt": "Cowboy - Digital Art"
     },
     {
         "id": 22,
         "name": "Picasso Cat",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/picassoCat.jpg",
-        "alt": "Picasso Cat - digitalArt"
+        "alt": "Picasso Cat - Digital Art"
     },
     {
         "id": 23,
         "name": "Jungle",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/jungle.jpg",
-        "alt": "Jungle - digitalArt"
+        "alt": "Jungle - Digital Art"
     },
     {
         "id": 24,
         "name": "Snow Hut",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/snowHut.jpg",
-        "alt": "Snow Hut - digitalArt"
+        "alt": "Snow Hut - Digital Art"
     },
     {
         "id": 25,
         "name": "Fairy Town",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/fairyTown.jpg",
-        "alt": "Fairy Town - digitalArt"
+        "alt": "Fairy Town - Digital Art"
     },
     {
         "id": 26,
         "name": "Afro Colorful",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/afroColorful.jpg",
-        "alt": "Afro Colorful - digitalArt"
+        "alt": "Afro Colorful - Digital Art"
     },
     {
         "id": 27,
         "name": "Art Woman",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/artWoman.jpg",
-        "alt": "Art Woman - digitalArt"
+        "alt": "Art Woman - Digital Art"
     },
     {
         "id": 28,
         "name": "Cool Cat",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/coolCat.png",
-        "alt": "Cool Cat - digitalArt"
+        "alt": "Cool Cat - Digital Art"
     },
     {
         "id": 29,
         "name": "Frog",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/frog.jpg",
-        "alt": "Frog - digitalArt"
+        "alt": "Frog - Digital Art"
     },
     {
         "id": 30,
         "name": "Colorful Kitten",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/colorfulKitten.jpg",
-        "alt": "Colorful Kitten - digitalArt"
+        "alt": "Colorful Kitten - Digital Art"
     },
     {
         "id": 31,
         "name": "Cat Drawing",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/catDrawing.jpg",
-        "alt": "Cat Drawing - digitalArt"
+        "alt": "Cat Drawing - Digital Art"
     },
     {
         "id": 32,
         "name": "Tree Of Life",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/treeOfLife.jpg",
-        "alt": "Tree Of Life - digitalArt"
+        "alt": "Tree Of Life - Digital Art"
     },
     {
         "id": 33,
         "name": "Father Daughter Space",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/fatherDaughterSpace.jpg",
-        "alt": "Father Daughter Space - digitalArt"
+        "alt": "Father Daughter Space - Digital Art"
     },
     {
         "id": 34,
         "name": "Old Man Smoking",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/oldManSmoking.jpg",
-        "alt": "Old Man Smoking - digitalArt"
+        "alt": "Old Man Smoking - Digital Art"
     },
     {
         "id": 35,
         "name": "House Moon",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/houseMoon.jpg",
-        "alt": "House Moon - digitalArt"
+        "alt": "House Moon - Digital Art"
     },
     {
         "id": 36,
         "name": "Lighthouse",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/lighthouse.jpg",
-        "alt": "Lighthouse - digitalArt"
+        "alt": "Lighthouse - Digital Art"
     },
     {
         "id": 37,
         "name": "River",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/river.jpg",
-        "alt": "River - digitalArt"
+        "alt": "River - Digital Art"
     },
     {
         "id": 38,
         "name": "Dragon",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/dragon.jpg",
-        "alt": "Dragon - digitalArt"
+        "alt": "Dragon - Digital Art"
     },
     {
         "id": 39,
         "name": "Couple",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/couple.jpg",
-        "alt": "Couple - digitalArt"
+        "alt": "Couple - Digital Art"
     },
     {
         "id": 40,
         "name": "Giraffe",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/giraffe.jpg",
-        "alt": "Giraffe - digitalArt"
+        "alt": "Giraffe - Digital Art"
     },
     {
         "id": 41,
         "name": "Ship Wreck",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/shipWreck.jpg",
-        "alt": "Ship Wreck - digitalArt"
+        "alt": "Ship Wreck - Digital Art"
     },
     {
         "id": 42,
         "name": "Clouds And Sea",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/cloudsAndSea.png",
-        "alt": "Clouds And Sea - digitalArt"
+        "alt": "Clouds And Sea - Digital Art"
     },
     {
         "id": 43,
         "name": "Pathway Pink Trees",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/pathwayPinkTrees.jpg",
-        "alt": "Pathway Pink Trees - digitalArt"
+        "alt": "Pathway Pink Trees - Digital Art"
     },
     {
         "id": 44,
         "name": "Lion",
-        "type": "digitalArt",
+        "type": "Digital Art",
         "price": 25,
         "src": "images/digitalArt/lion.jpg",
-        "alt": "Lion - digitalArt"
+        "alt": "Lion - Digital Art"
     },
     {
         "id": 45,
         "name": "Yellow Leaves",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/yellowLeaves.jpg",
-        "alt": "Yellow Leaves - patterns"
+        "alt": "Yellow Leaves - Pattern"
     },
     {
         "id": 46,
         "name": "Air Balloons",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/airBalloons.png",
-        "alt": "Air Balloons - patterns"
+        "alt": "Air Balloons - Pattern"
     },
     {
         "id": 47,
         "name": "White Flowers",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/whiteFlowers.png",
-        "alt": "White Flowers - patterns"
+        "alt": "White Flowers - Pattern"
     },
     {
         "id": 48,
         "name": "Leaves Black White",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/leavesBlackWhite.png",
-        "alt": "Leaves Black White - patterns"
+        "alt": "Leaves Black White - Pattern"
     },
     {
         "id": 49,
         "name": "Hedgehogs",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/hedgehogs.jpg",
-        "alt": "Hedgehogs - patterns"
+        "alt": "Hedgehogs - Pattern"
     },
     {
         "id": 50,
         "name": "Animals",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/animals.jpg",
-        "alt": "Animals - patterns"
+        "alt": "Animals - Pattern"
     },
     {
         "id": 51,
         "name": "Flowers Black White",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/flowersBlackWhite.png",
-        "alt": "Flowers Black White - patterns"
+        "alt": "Flowers Black White - Pattern"
     },
     {
         "id": 52,
         "name": "Forest Animals",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/forestAnimals.jpg",
-        "alt": "Forest Animals - patterns"
+        "alt": "Forest Animals - Pattern"
     },
     {
         "id": 53,
         "name": "Red Flowers",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/redFlowers.png",
-        "alt": "Red Flowers - patterns"
+        "alt": "Red Flowers - Pattern"
     },
     {
         "id": 54,
         "name": "Marble Texture",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/marbleTexture.png",
-        "alt": "Marble Texture - patterns"
+        "alt": "Marble Texture - Pattern"
     },
     {
         "id": 55,
         "name": "Sunflowers",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/sunflowers.jpg",
-        "alt": "Sunflowers - patterns"
+        "alt": "Sunflowers - Pattern"
     },
     {
         "id": 56,
         "name": "Bird Cactus",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/birdCactus.jpg",
-        "alt": "Bird Cactus - patterns"
+        "alt": "Bird Cactus - Pattern"
     },
     {
         "id": 57,
         "name": "Butterflies",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/butterflies.png",
-        "alt": "Butterflies - patterns"
+        "alt": "Butterflies - Pattern"
     },
     {
         "id": 58,
         "name": "Leaves",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/leaves.png",
-        "alt": "Leaves - patterns"
+        "alt": "Leaves - Pattern"
     },
     {
         "id": 59,
         "name": "Citrus",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/citrus.jpg",
-        "alt": "Citrus - patterns"
+        "alt": "Citrus - Pattern"
     },
     {
         "id": 60,
         "name": "Yellow White Flowers",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/yellowWhiteFlowers.png",
-        "alt": "Yellow White Flowers - patterns"
+        "alt": "Yellow White Flowers - Pattern"
     },
     {
         "id": 61,
         "name": "Leaves Brown Yellow",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/leavesBrownYellow.jpg",
-        "alt": "Leaves Brown Yellow - patterns"
+        "alt": "Leaves Brown Yellow - Pattern"
     },
     {
         "id": 62,
         "name": "Sharks",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/sharks.jpg",
-        "alt": "Sharks - patterns"
+        "alt": "Sharks - Pattern"
     },
     {
         "id": 63,
         "name": "Birds",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/birds.jpg",
-        "alt": "Birds - patterns"
+        "alt": "Birds - Pattern"
     },
     {
         "id": 64,
         "name": "Flowers",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/flowers.png",
-        "alt": "Flowers - patterns"
+        "alt": "Flowers - Pattern"
     },
     {
         "id": 65,
         "name": "Lilies With Leaves",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/liliesWithLeaves.jpg",
-        "alt": "Lilies With Leaves - patterns"
+        "alt": "Lilies With Leaves - Pattern"
     },
     {
         "id": 66,
         "name": "Book Cover",
-        "type": "patterns",
+        "type": "Pattern",
         "price": 10,
         "src": "images/patterns/bookCover.png",
-        "alt": "Book Cover - patterns"
+        "alt": "Book Cover - Pattern"
     },
     {
         "id": 67,
         "name": "Robot Girl",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/robotGirl.jpg",
-        "alt": "Robot Girl - realisticPhotos"
+        "alt": "Robot Girl - Realistic Photos"
     },
     {
         "id": 68,
         "name": "Madrid Office",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/madridOffice.jpg",
-        "alt": "Madrid Office - realisticPhotos"
+        "alt": "Madrid Office - Realistic Photos"
     },
     {
         "id": 69,
         "name": "Locomotive",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/locomotive.jpg",
-        "alt": "Locomotive - realisticPhotos"
+        "alt": "Locomotive - Realistic Photos"
     },
     {
         "id": 70,
         "name": "Boat On Lake",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/boatOnLake.jpg",
-        "alt": "Boat On Lake - realisticPhotos"
+        "alt": "Boat On Lake - Realistic Photos"
     },
     {
         "id": 71,
         "name": "Dog River",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/dogRiver.jpg",
-        "alt": "Dog River - realisticPhotos"
+        "alt": "Dog River - Realistic Photos"
     },
     {
         "id": 72,
         "name": "Wren Bird",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/wrenBird.jpg",
-        "alt": "Wren Bird - realisticPhotos"
+        "alt": "Wren Bird - Realistic Photos"
     },
     {
         "id": 73,
         "name": "Forest Path",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/forestPath.jpg",
-        "alt": "Forest Path - realisticPhotos"
+        "alt": "Forest Path - Realistic Photos"
     },
     {
         "id": 74,
         "name": "Desert",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/desert.jpg",
-        "alt": "Desert - realisticPhotos"
+        "alt": "Desert - Realistic Photos"
     },
     {
         "id": 75,
         "name": "Temple",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/temple.jpg",
-        "alt": "Temple - realisticPhotos"
+        "alt": "Temple - Realistic Photos"
     },
     {
         "id": 76,
         "name": "Vampires",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/vampires.jpg",
-        "alt": "Vampires - realisticPhotos"
+        "alt": "Vampires - Realistic Photos"
     },
     {
         "id": 77,
         "name": "Lemur",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/lemur.jpg",
-        "alt": "Lemur - realisticPhotos"
+        "alt": "Lemur - Realistic Photos"
     },
     {
         "id": 78,
         "name": "Clown",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/clown.jpg",
-        "alt": "Clown - realisticPhotos"
+        "alt": "Clown - Realistic Photos"
     },
     {
         "id": 79,
         "name": "Cabin In Forest",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/cabinInForest.jpg",
-        "alt": "Cabin In Forest - realisticPhotos"
+        "alt": "Cabin In Forest - Realistic Photos"
     },
     {
         "id": 80,
         "name": "Dragon Forest",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/dragonForest.jpg",
-        "alt": "Dragon Forest - realisticPhotos"
+        "alt": "Dragon Forest - Realistic Photos"
     },
     {
         "id": 81,
         "name": "Winter Fog",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/winterFog.jpg",
-        "alt": "Winter Fog - realisticPhotos"
+        "alt": "Winter Fog - Realistic Photos"
     },
     {
         "id": 82,
         "name": "Doll Woman",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/dollWoman.jpg",
-        "alt": "Doll Woman - realisticPhotos"
+        "alt": "Doll Woman - Realistic Photos"
     },
     {
         "id": 83,
         "name": "Astronaut In Space",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/astronautInSpace.jpg",
-        "alt": "Astronaut In Space - realisticPhotos"
+        "alt": "Astronaut In Space - Realistic Photos"
     },
     {
         "id": 84,
         "name": "Crab Forest",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/crabForest.jpg",
-        "alt": "Crab Forest - realisticPhotos"
+        "alt": "Crab Forest - Realistic Photos"
     },
     {
         "id": 85,
         "name": "Sky Castle",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/skyCastle.jpg",
-        "alt": "Sky Castle - realisticPhotos"
+        "alt": "Sky Castle - Realistic Photos"
     },
     {
         "id": 86,
         "name": "Pelican Bird",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/pelicanBird.jpg",
-        "alt": "Pelican Bird - realisticPhotos"
+        "alt": "Pelican Bird - Realistic Photos"
     },
     {
         "id": 87,
         "name": "Cave",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/cave.jpg",
-        "alt": "Cave - realisticPhotos"
+        "alt": "Cave - Realistic Photos"
     },
     {
         "id": 88,
         "name": "Cat Window",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/catWindow.jpg",
-        "alt": "Cat Window - realisticPhotos"
+        "alt": "Cat Window - Realistic Photos"
     },
     {
         "id": 89,
         "name": "Woman Hunter",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/womanHunter.jpg",
-        "alt": "Woman Hunter - realisticPhotos"
+        "alt": "Woman Hunter - Realistic Photos"
     },
     {
         "id": 90,
         "name": "Book Trees",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/bookTrees.png",
-        "alt": "Book Trees - realisticPhotos"
+        "alt": "Book Trees - Realistic Photos"
     },
     {
         "id": 91,
         "name": "Boxing Child",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/boxingChild.jpg",
-        "alt": "Boxing Child - realisticPhotos"
+        "alt": "Boxing Child - Realistic Photos"
     },
     {
         "id": 92,
         "name": "Park Statue",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/parkStatue.jpg",
-        "alt": "Park Statue - realisticPhotos"
+        "alt": "Park Statue - Realistic Photos"
     },
     {
         "id": 93,
         "name": "Bride Piano",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/bridePiano.jpg",
-        "alt": "Bride Piano - realisticPhotos"
+        "alt": "Bride Piano - Realistic Photos"
     },
     {
         "id": 94,
         "name": "Cross City",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/crossCity.jpg",
-        "alt": "Cross City - realisticPhotos"
+        "alt": "Cross City - Realistic Photos"
     },
     {
         "id": 95,
         "name": "Old Man",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/oldMan.jpg",
-        "alt": "Old Man - realisticPhotos"
+        "alt": "Old Man - Realistic Photos"
     },
     {
         "id": 96,
         "name": "Elf",
-        "type": "realisticPhotos",
+        "type": "Realistic Photos",
         "price": 50,
         "src": "images/realisticPhotos/elf.jpg",
-        "alt": "Elf - realisticPhotos"
+        "alt": "Elf - Realistic Photos"
     }
 ]

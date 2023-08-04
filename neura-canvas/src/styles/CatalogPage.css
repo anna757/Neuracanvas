@@ -1,0 +1,65 @@
+.catalog-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden; /* Prevent content from overflowing the card */
+}
+
+.catalog-title {
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.catalog-image {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    margin: auto;
+    max-height: 30rem;
+    object-fit: cover;
+}
+
+.catalog-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+}
+
+.catalog-actions button {
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.catalog-actions button:nth-child(2) {
+    background-color: var(--secondary-color);
+}
+
+.catalog-actions button:hover {
+    transform: scale(1.05);
+}
+
+.catalog-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.catalog-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-actions button:hover {
+    background-color: var(--secondary-color);
+}
+
