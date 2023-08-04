@@ -6,6 +6,11 @@ import theme from './styles/theme';
 import Navbar from './components/Navbar';
 import AppRoutes from './AppRoutes';
 
+/**
+ * The main component of the application.
+ * Renders the authentication provider, theme provider, router, navbar, and app routes.
+ * @returns {JSX.Element} The rendered component.
+ */
 const App = () => {
   return (
     <AuthProvider>

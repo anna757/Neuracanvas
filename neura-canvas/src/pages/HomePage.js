@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../styles/HomePage.css';
 import imageData from '../data/images.json';
 
+/**
+ * Renders the home page of an artistic adventure website.
+ * Displays a gallery of selected AI-generated digital art images and provides a call-to-action button to start exploring the catalog.
+ * 
+ * @returns {JSX.Element} The JSX element representing the home page.
+ */
 const HomePage = () => {
   const selectedIDs = [9, 87, 5, 19, 10, 22, 84, 67, 85, 23, 34, 30, 29,
    27, 26, 25, 24, 21, 20, 19, 18];
