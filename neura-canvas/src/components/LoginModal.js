@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import {Modal, Typography, Button, TextField, useTheme } from '@mui/material';
+import {Modal, Typography, Button, TextField, useTheme, } from '@mui/material';
 import { AuthContext } from '../services/AuthContext';
 import '../styles/LoginModal.css'
 
@@ -10,6 +10,7 @@ const LoginModal = ({ open, handleClose }) => {
     const { logIn } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -18,14 +19,21 @@ const LoginModal = ({ open, handleClose }) => {
             handleClose();
             document.activeElement.blur();
         } else {
-            alert('Invalid username or password');
+            setErrorMessage('Invalid username or password!');
         }
     };
 
+    const handleModalClose = () => {
+        setErrorMessage('');
+        setUsername('');
+        setPassword('');
+        handleClose();  
+      };
+
     return (
-        <Modal open={open} onClose={handleClose} disableRestoreFocus>
+        <Modal open={open} onClose={handleModalClose} disableRestoreFocus>
             <form className="modal-container" onSubmit={handleLogin}>
-                <Typography variant="h5">Sign in to your account</Typography>
+                <Typography variant="h5">Sign in to NeuraCanvas</Typography>
                 <TextField
                     autoFocus
                     className="modal-input"
@@ -33,14 +41,17 @@ const LoginModal = ({ open, handleClose }) => {
                     variant="outlined"
                     onChange={e => setUsername(e.target.value)}
                     required
-                    sx={{ margin: '15px 0' }} />
+                    sx={{ margin: '15px 0' }}
+                    error={!!errorMessage} />
                 <TextField
                     className="modal-input"
                     label="Password"
                     type="password"
                     variant="outlined"
                     onChange={e => setPassword(e.target.value)}
-                    required />
+                    required
+                    error={!!errorMessage}
+                    helperText={errorMessage} />
                 <Button
                     type="submit"
                     onClick={handleLogin}
