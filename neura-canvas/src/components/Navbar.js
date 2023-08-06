@@ -1,18 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../services/AuthContext';
+import { CartContext } from '../services/CartContext';
 import { AppBar, Toolbar, Button, Grid, Box, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LinkButton from './LinkButton';
-import '../styles/Navbar.css';
 import CartModal from './CartModal';
-import { CartContext } from '../services/CartContext';
+import LoginModal from './LoginModal';
+import '../styles/Navbar.css';
 
 
 const Navbar = React.memo(() => {
   const { isLoggedIn, logOut } = useContext(AuthContext);
   const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   return (
     <AppBar position='static' >
@@ -32,9 +34,15 @@ const Navbar = React.memo(() => {
           <Grid item>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
               <Badge badgeContent={cartItems.length} color="error">
-                <Button color='primary' startIcon={<ShoppingCartIcon onClick={() => setIsCartOpen(true)} />}>Cart</Button>
+                <Button color='primary' startIcon={<ShoppingCartIcon />}  onClick={() => setIsCartOpen(true)}>Cart</Button>
               </Badge>
-              <Button color='primary' startIcon={<AccountCircleIcon />} component={Link} to={isLoggedIn ? '/' : '/login'} onClick={isLoggedIn ? logOut : null}>
+              <Button
+                color='primary'
+                startIcon={<AccountCircleIcon />}
+                onClick={() => {
+                  if (isLoggedIn) logOut();
+                  else setLoginModalOpen(true);  // Open the login modal
+                  }}>
                 {isLoggedIn ? 'Logout' : 'Login'}
               </Button>
             </Box>
@@ -42,6 +50,9 @@ const Navbar = React.memo(() => {
         </Grid>
       </Toolbar>
       <CartModal cartItems={cartItems} open={isCartOpen} onClose={() => setIsCartOpen(false)} />
+      <LoginModal 
+      open={loginModalOpen} 
+      handleClose={() => setLoginModalOpen(false)} />
     </AppBar>
   );
 });

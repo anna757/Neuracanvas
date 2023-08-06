@@ -7,8 +7,9 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const storedLoginStatus = localStorage.getItem('isLoggedIn');
-    setIsLoggedIn(storedLoginStatus === 'false');
-  }, []);
+    setIsLoggedIn(storedLoginStatus === 'true');
+}, []);
+
 
   const logIn = () => {
     localStorage.setItem('isLoggedIn', 'true');

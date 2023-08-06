@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal, Typography, Button, List, ListItem, Divider } from '@mui/material';
 
 const CartModal = ({ cartItems, open, onClose }) => {
