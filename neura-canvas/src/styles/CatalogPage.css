@@ -39,10 +39,7 @@
     text-transform: uppercase;
     transition: all 0.3s ease;
     margin-bottom: 0.5rem;
-}
-
-.catalog-actions button:nth-child(2) {
-    background-color: var(--secondary-color);
+    width: 100%;
 }
 
 .catalog-actions button:hover {
@@ -60,6 +57,34 @@
 }
 
 .catalog-actions button:hover {
+    transform: scale(1.05);
     background-color: var(--secondary-color);
 }
 
+.product-title{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.product-title :hover {
+    color: var(--primary-color);
+}
+
+.added-confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(0, 128, 0, 0.9);  /* green with slight transparency */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 2000;
+    transition: transform 0.5s;
+}
+
+.added-confirmation.show {
+    transform: translate(-50%, -50%) scale(1);
+}

@@ -1,14 +1,18 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../services/AuthContext';
-import { AppBar, Toolbar, Button, Grid, Box } from '@mui/material';
+import { AppBar, Toolbar, Button, Grid, Box, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LinkButton from './LinkButton';
 import '../styles/Navbar.css';
+import CartModal from './CartModal';
+import { CartContext } from '../services/CartContext';
+
 
 const Navbar = React.memo(() => {
   const { isLoggedIn, logOut } = useContext(AuthContext);
+  const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
 
   return (
     <AppBar position='static' >
@@ -27,7 +31,9 @@ const Navbar = React.memo(() => {
           </Grid>
           <Grid item>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Button color='primary' startIcon={<ShoppingCartIcon />} component={Link} to='/cart'>Cart</Button>
+              <Badge badgeContent={cartItems.length} color="error">
+                <Button color='primary' startIcon={<ShoppingCartIcon onClick={() => setIsCartOpen(true)} />}>Cart</Button>
+              </Badge>
               <Button color='primary' startIcon={<AccountCircleIcon />} component={Link} to={isLoggedIn ? '/' : '/login'} onClick={isLoggedIn ? logOut : null}>
                 {isLoggedIn ? 'Logout' : 'Login'}
               </Button>
@@ -35,6 +41,7 @@ const Navbar = React.memo(() => {
           </Grid>
         </Grid>
       </Toolbar>
+      <CartModal cartItems={cartItems} open={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </AppBar>
   );
 });

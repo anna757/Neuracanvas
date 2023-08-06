@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import imageData from '../data/images.json';
 import { Masonry } from '@mui/lab';
-import { CardContent, CardActions, Typography, Button, Box, Paper, useTheme, useMediaQuery } from '@mui/material';
+import {
+    CardContent, CardActions, Typography, Button,
+    Box, Paper, useTheme, useMediaQuery, Snackbar, Alert
+} from '@mui/material';
 import '../styles/CatalogPage.css';
+import { Link, useNavigate } from 'react-router-dom';
+import { CartContext } from '../services/CartContext';
 
 /**
  * Calculates the number of columns to be used in a Masonry layout based on the current screen size.
@@ -26,31 +31,69 @@ const useColumns = () => {
  * @returns {JSX.Element} The catalog page component.
  */
 const CatalogPage = () => {
+    const navigate = useNavigate();
+    const { addCartItem } = useContext(CartContext);
     const columns = useColumns();
+    const [snackbarOpen, setSnackbarOpen] = useState(false); // State for controlling Snackbar visibility
+
+    const handleAddToCart = (image) => {
+        addCartItem(image);
+        setSnackbarOpen(true); // Show the Snackbar
+        setTimeout(() => setSnackbarOpen(false), 1000); // Hide the Snackbar after 3 seconds
+    };
 
     return (
         <Box className="catalog-container">
-            <Typography variant="h3" className="catalog-title">Explore Our Collection</Typography>
+            <Typography variant="h3" className="catalog-title">
+                Explore Our Collection
+            </Typography>
             <Masonry columns={columns} spacing={2}>
                 {imageData.map((image) => (
                     <Paper className="catalog-card" key={image.id}>
-                        <img src={image.src} alt={image.alt} className="catalog-image" />
+                        <Link to={`/product/${image.id}`}>
+                            <img src={image.src} alt={image.alt} className="catalog-image" />
+                        </Link>
                         <CardContent>
-                            <Typography variant="h6">{image.name}</Typography>
+                            <Link to={`/product/${image.id}`} className='product-title'>
+                                <Typography variant="h6">{image.name}</Typography>
+                            </Link>
                             <Typography variant="body1">{image.type}</Typography>
                             <Typography variant="body1">${image.price}</Typography>
                         </CardContent>
                         <CardActions className="catalog-actions">
                             <div>
-                                <Button variant="contained" color="primary" size="medium">View Details</Button>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    size="medium"
+                                    onClick={() => navigate(`/product/${image.id}`)}>
+                                    View Details
+                                </Button>
                             </div>
                             <div>
-                                <Button variant="contained" color="secondary" size="medium">Add to Cart</Button>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    size="medium"
+                                    onClick={() => handleAddToCart(image)}>
+                                    Add to Cart
+                                </Button>
                             </div>
                         </CardActions>
                     </Paper>
                 ))}
             </Masonry>
+            <Snackbar
+                open={snackbarOpen}
+                autoHideDuration={3000}
+                onClose={() => setSnackbarOpen(false)}
+                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  // Positioning it at the top right
+            >
+                <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
+                    Added to cart!
+                </Alert>
+            </Snackbar>
+
         </Box>
     );
 };
