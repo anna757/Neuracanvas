@@ -105,7 +105,6 @@ const Cart = ({ anchorEl }) => {
                         ))}
                     </List>
                     <div className="cart-footer">
-
                         <Button
                             variant="contained"
                             color="primary"

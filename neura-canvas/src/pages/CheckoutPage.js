@@ -1,20 +1,31 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext'; 
 import { CartContext } from '../context/CartContext';
 import {
     Typography, TextField, Button,
-    Divider, Snackbar, Alert, Select, MenuItem
+    Divider, Select, MenuItem
 } from '@mui/material';
+import SnackbarComponent from '../components/SnackbarComponent';
+
 import '../styles/CheckoutPage.css';
 
 const CheckoutPage = () => {
     const { cartItems, handleAdjustQuantity, handleRemoveItem } = useContext(CartContext);
+    const { isLoggedIn, openLoginModal } = useContext(AuthContext);
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [emptyCartAlert, setEmptyCartAlert] = useState(false);
 
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     };
+
+    // Effect to watch isLoggedIn state, if it changes to false, open login modal
+    useEffect(() => {
+        if (!isLoggedIn) {
+            openLoginModal();
+        }
+    }, [isLoggedIn, openLoginModal]);
 
     const handlePlaceOrder = (e) => {
         e.preventDefault();
@@ -109,25 +120,20 @@ const CheckoutPage = () => {
                     Place Order for ${calculateTotal().toFixed(2)}
                 </Button>
             </form>
-            <Snackbar open={orderPlaced}
-                autoHideDuration={6000}
-                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-                onClose={() => setOrderPlaced(false)}>
-                <Alert onClose={() => setOrderPlaced(false)} severity="success">
-                    Order placed successfully!
-                </Alert>
-            </Snackbar>
-            <Snackbar open={emptyCartAlert}
-                autoHideDuration={6000}
-                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
-                onClose={() => setEmptyCartAlert(false)}>
-                <Alert onClose={() => setEmptyCartAlert(false)} severity="warning" className="empty-cart-alert">
-                    Cannot place order. Your cart is empty!
-                    <div className="catalog-link">
-                        <Link to="/catalog">Go to Catalog</Link>
-                    </div>
-                </Alert>
-            </Snackbar>
+            <SnackbarComponent
+                open={orderPlaced}
+                handleClose={() => setOrderPlaced(false)}
+                duration={6000}
+                severity="success"
+                message="Order placed successfully!"
+            />
+            <SnackbarComponent
+                open={emptyCartAlert}
+                handleClose={() => setEmptyCartAlert(false)}
+                duration={6000}
+                severity="warning"
+                message="Cannot place order. Your cart is empty!"
+            />
 
         </div>
     );

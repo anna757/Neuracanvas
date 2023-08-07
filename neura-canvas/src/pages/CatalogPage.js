@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
-import imageData from '../data/images.json';
+import products from '../data/images.json';
+import SnackbarComponent from '../components/SnackbarComponent';
 import { Masonry } from '@mui/lab';
 import {
     CardContent, CardActions, Typography, Button,
-    Box, Paper, useTheme, useMediaQuery, Snackbar, Alert
-} from '@mui/material';
+    Box, Paper, useTheme, useMediaQuery } from '@mui/material';
 import '../styles/CatalogPage.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
@@ -35,8 +35,8 @@ const CatalogPage = () => {
     const columns = useColumns();
     const [snackbarOpen, setSnackbarOpen] = useState(false); // State for controlling Snackbar visibility
 
-    const handleAddToCart = (image) => {
-        addCartItem(image);
+    const handleAddToCart = (product) => {
+        addCartItem(product);
         setSnackbarOpen(true); // Show the Snackbar
     };
 
@@ -46,26 +46,26 @@ const CatalogPage = () => {
                 Explore Our Collection
             </Typography>
             <Masonry columns={columns} spacing={2}>
-                {imageData.map((image) => (
-                    <Paper className="catalog-card" key={image.id}>
-                        <Link to={`/product/${image.id}`}>
-                            <img src={image.src} alt={image.alt} className="catalog-image" />
+                {products.map((product) => (
+                    <Paper className="catalog-card" key={product.id}>
+                        <Link to={`/product/${product.id}`}>
+                            <img src={product.src} alt={product.alt} className="catalog-image" />
                         </Link>
                         <CardContent>
-                            <Link to={`/product/${image.id}`} className='product-title'>
-                                <Typography variant="h6">{image.name}</Typography>
+                            <Link to={`/product/${product.id}`} className='product-title'>
+                                <Typography variant="h6">{product.name}</Typography>
                             </Link>
-                            <Typography variant="body1">{image.type}</Typography>
-                            <Typography variant="body1">${image.price}</Typography>
+                            <Typography variant="body1">{product.type}</Typography>
+                            <Typography variant="body1">${product.price}</Typography>
                         </CardContent>
                         <CardActions className="catalog-actions">
                             <div>
-                                <Link to={`/product/${image.id}`}>
+                                <Link to={`/product/${product.id}`}>
                                     <Button
                                         variant="contained"
                                         color="primary"
                                         size="medium">
-                                        View Details
+                                        View Product
                                     </Button>
                                 </Link>
                             </div>
@@ -74,7 +74,7 @@ const CatalogPage = () => {
                                     variant="contained"
                                     color="primary"
                                     size="medium"
-                                    onClick={() => handleAddToCart(image)}>
+                                    onClick={() => handleAddToCart(product)}>
                                     Add to Cart
                                 </Button>
                             </div>
@@ -82,16 +82,13 @@ const CatalogPage = () => {
                     </Paper>
                 ))}
             </Masonry>
-            <Snackbar
+            <SnackbarComponent
                 open={snackbarOpen}
-                autoHideDuration={1500}
-                onClose={() => setSnackbarOpen(false)}
-                anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  // Positioning it at the top right
-            >
-                <Alert onClose={() => setSnackbarOpen(false)} severity="success" sx={{ width: '100%' }}>
-                    Added to cart!
-                </Alert>
-            </Snackbar>
+                handleClose={() => setSnackbarOpen(false)}
+                duration={1500}
+                severity="success"
+                message="Added to cart!"
+            />
 
         </Box>
     );

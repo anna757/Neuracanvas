@@ -12,8 +12,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const storedLoginStatus = localStorage.getItem('isLoggedIn');
     setIsLoggedIn(storedLoginStatus === 'true');
-}, []);
-
+  }, []);
 
   const logIn = () => {
     localStorage.setItem('isLoggedIn', 'true');
@@ -26,10 +25,11 @@ const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, logIn, logOut, loginModalOpen, openLoginModal, closeLoginModal  }}>
+    <AuthContext.Provider value={{ isLoggedIn, logIn, logOut, loginModalOpen, openLoginModal, closeLoginModal }}>
       {children}
     </AuthContext.Provider>
   );
 };
+
 
 export {AuthProvider, AuthContext};
