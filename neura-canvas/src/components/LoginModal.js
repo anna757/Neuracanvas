@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import {Modal, Typography, Button, TextField, useTheme, } from '@mui/material';
-import { AuthContext } from '../services/AuthContext';
+import { Modal, Typography, Button, TextField, useTheme, } from '@mui/material';
+import { AuthContext } from '../context/AuthContext';
 import '../styles/LoginModal.css'
 
 
@@ -27,11 +27,15 @@ const LoginModal = ({ open, handleClose }) => {
         setErrorMessage('');
         setUsername('');
         setPassword('');
-        handleClose();  
-      };
+        handleClose();
+    };
 
     return (
-        <Modal open={open} onClose={handleModalClose} disableRestoreFocus>
+        <Modal
+            open={open}
+            onClose={handleModalClose}
+            disableRestoreFocus
+        >
             <form className="modal-container" onSubmit={handleLogin}>
                 <Typography variant="h5">Sign in to NeuraCanvas</Typography>
                 <TextField
@@ -42,7 +46,8 @@ const LoginModal = ({ open, handleClose }) => {
                     onChange={e => setUsername(e.target.value)}
                     required
                     sx={{ margin: '15px 0' }}
-                    error={!!errorMessage} />
+                    error={!!errorMessage}
+                />
                 <TextField
                     className="modal-input"
                     label="Password"
@@ -51,7 +56,8 @@ const LoginModal = ({ open, handleClose }) => {
                     onChange={e => setPassword(e.target.value)}
                     required
                     error={!!errorMessage}
-                    helperText={errorMessage} />
+                    helperText={errorMessage}
+                />
                 <Button
                     type="submit"
                     onClick={handleLogin}
@@ -66,7 +72,8 @@ const LoginModal = ({ open, handleClose }) => {
                             backgroundColor: 'var(--secondary-color)'
                         }
                     }}
-                >Login</Button>
+                >Login
+                </Button>
             </form>
         </Modal>
     );

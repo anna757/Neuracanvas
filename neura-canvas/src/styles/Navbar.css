@@ -1,5 +1,6 @@
 .navbar {
     background-color: #EBF5FB;
+    position: static;
 }
 
 #logo {

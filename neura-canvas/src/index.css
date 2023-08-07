@@ -22,24 +22,25 @@ code {
 
 /* For webkit browsers: Chrome, Safari */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #EBF5FB; /* Neutral light blue background */
+  background: rgba(235, 245, 251, 0.5); /* Neutral light blue background with transparency */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A4D69; /* Primary dark blue color */
+  background: linear-gradient(to bottom, #2A4D69, #4B86B4); /* Gradient from dark blue to secondary blue */
   border-radius: 4px;
+  opacity: 0.8; /* Transparency applied to the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4B86B4; /* On hover, use the secondary blue color */
+  background: linear-gradient(to bottom, #4B86B4, #2A4D69); /* Reverse gradient on hover */
 }
 
-/* For Firefox */
+/* For Firefox (Note: Firefox doesn't fully support gradients on scrollbars) */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #2A4D69 #EBF5FB;
+  scrollbar-color: #2A4D69 rgba(235, 245, 251, 0.5);
 }

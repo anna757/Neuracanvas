@@ -6,8 +6,8 @@ import {
     Box, Paper, useTheme, useMediaQuery, Snackbar, Alert
 } from '@mui/material';
 import '../styles/CatalogPage.css';
-import { Link, useNavigate } from 'react-router-dom';
-import { CartContext } from '../services/CartContext';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
 /**
  * Calculates the number of columns to be used in a Masonry layout based on the current screen size.
@@ -31,7 +31,6 @@ const useColumns = () => {
  * @returns {JSX.Element} The catalog page component.
  */
 const CatalogPage = () => {
-    const navigate = useNavigate();
     const { addCartItem } = useContext(CartContext);
     const columns = useColumns();
     const [snackbarOpen, setSnackbarOpen] = useState(false); // State for controlling Snackbar visibility
@@ -39,7 +38,6 @@ const CatalogPage = () => {
     const handleAddToCart = (image) => {
         addCartItem(image);
         setSnackbarOpen(true); // Show the Snackbar
-        setTimeout(() => setSnackbarOpen(false), 1000); // Hide the Snackbar after 3 seconds
     };
 
     return (
@@ -62,13 +60,14 @@ const CatalogPage = () => {
                         </CardContent>
                         <CardActions className="catalog-actions">
                             <div>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="medium"
-                                    onClick={() => navigate(`/product/${image.id}`)}>
-                                    View Details
-                                </Button>
+                                <Link to={`/product/${image.id}`}>
+                                    <Button
+                                        variant="contained"
+                                        color="primary"
+                                        size="medium">
+                                        View Details
+                                    </Button>
+                                </Link>
                             </div>
                             <div>
                                 <Button
@@ -85,7 +84,7 @@ const CatalogPage = () => {
             </Masonry>
             <Snackbar
                 open={snackbarOpen}
-                autoHideDuration={3000}
+                autoHideDuration={1500}
                 onClose={() => setSnackbarOpen(false)}
                 anchorOrigin={{ vertical: 'top', horizontal: 'center' }}  // Positioning it at the top right
             >
