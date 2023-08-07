@@ -4,6 +4,10 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
+
+  const openLoginModal = () => setLoginModalOpen(true);
+  const closeLoginModal = () => setLoginModalOpen(false);
 
   useEffect(() => {
     const storedLoginStatus = localStorage.getItem('isLoggedIn');
@@ -21,14 +25,8 @@ const AuthProvider = ({ children }) => {
     setIsLoggedIn(false);
   };
 
-  const register = (user, password) => {
-    // Here you would typically make a request to your server to register the user.
-    // For now, we'll just log the user in after they register.
-    logIn(user, password);
-  };
-
   return (
-    <AuthContext.Provider value={{ isLoggedIn, logIn, logOut, register }}>
+    <AuthContext.Provider value={{ isLoggedIn, logIn, logOut, loginModalOpen, openLoginModal, closeLoginModal  }}>
       {children}
     </AuthContext.Provider>
   );

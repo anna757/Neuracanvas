@@ -13,9 +13,8 @@ import '../styles/Navbar.css';
 
 const Navbar = React.memo(() => {
   const cartButtonRef = useRef(null);
-  const { isLoggedIn, logOut } = useContext(AuthContext);
+  const { isLoggedIn, logOut, loginModalOpen, openLoginModal, closeLoginModal } = useContext(AuthContext);
   const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
-  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   return (
     <AppBar position='static' >
@@ -51,7 +50,7 @@ const Navbar = React.memo(() => {
                 startIcon={<AccountCircleIcon />}
                 onClick={() => {
                   if (isLoggedIn) logOut();
-                  else setLoginModalOpen(true);  // Open the login modal
+                  else openLoginModal();
                 }}>
                 {isLoggedIn ? 'Logout' : 'Login'}
               </Button>
@@ -66,7 +65,7 @@ const Navbar = React.memo(() => {
         anchorEl={cartButtonRef.current} />
       <LoginModal
         open={loginModalOpen}
-        handleClose={() => setLoginModalOpen(false)} />
+        handleClose={closeLoginModal} />
     </AppBar>
   );
 });

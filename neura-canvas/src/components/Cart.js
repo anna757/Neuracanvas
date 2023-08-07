@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 import { CartContext } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 import { Button, List, ListItem, ListItemText, ListItemAvatar, 
     Avatar, IconButton, Popover, Divider, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
@@ -8,6 +10,17 @@ import '../styles/Cart.css'
 
 const Cart = ({ anchorEl }) => {
     const { cartItems, isCartOpen, setIsCartOpen, handleRemoveItem, handleAdjustQuantity } = useContext(CartContext);
+    const { isLoggedIn, openLoginModal } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const checkoutButtonContent = isLoggedIn ? 'Proceed to Checkout' : 'Login to Checkout';
+    const handleCheckout = () => {
+        if (isLoggedIn) {
+            navigate("/checkout");
+        } else {
+            openLoginModal();
+        }
+    };
+
 
     const handleClose = () => {
         setIsCartOpen(false);
@@ -74,12 +87,15 @@ const Cart = ({ anchorEl }) => {
                         ))}
                     </List>
                     <div className="cart-footer">
+                        
                         <Button
                             variant="contained"
                             color="primary"
-                            className="checkout-button">
-                            Checkout
+                            className="checkout-button"
+                            onClick={handleCheckout}>
+                            {checkoutButtonContent}
                         </Button>
+
                     </div>
                 </>
             )}
