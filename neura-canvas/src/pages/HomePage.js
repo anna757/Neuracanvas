@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'; // Import Link for navigation
 import '../styles/HomePage.css';
 import imageData from '../data/images.json';
 
+const selectedIDs = [67, 84, 9, 5, 22, 18, 23, 34, 30, 29,
+  27, 26, 25, 24];
+
 /**
  * Renders the home page of an artistic adventure website.
  * Displays a gallery of selected AI-generated digital art images and provides a call-to-action button to start exploring the catalog.
@@ -10,10 +13,9 @@ import imageData from '../data/images.json';
  * @returns {JSX.Element} The JSX element representing the home page.
  */
 const HomePage = () => {
-  const selectedIDs = [9, 87, 5, 19, 10, 22, 84, 67, 85, 23, 34, 30, 29,
-   27, 26, 25, 24, 21, 20, 19, 18];
-  const imageMap = new Map(imageData.map(image => [image.id, image]));
-  const images = selectedIDs.map(id => imageMap.get(id));
+  const imageMap = React.useMemo(() => new Map(imageData.map(image => [image.id, image])), []);
+  const images = React.useMemo(() => selectedIDs.map(id => imageMap.get(id)), [imageMap]);
+
 
   return (
     <div className="home-container">
@@ -21,7 +23,7 @@ const HomePage = () => {
         <div className="gallery-container">
           {images.map((image) => (
             <div key={image.id} className="gallery-item">
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.name} />
             </div>
           ))}
         </div>
@@ -36,3 +38,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
