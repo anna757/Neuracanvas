@@ -44,8 +44,8 @@ const DetailsPage = () => {
         <Typography variant="h5" className="product-price">${product.price}</Typography>
         <Typography variant="body2" className="product-description">{product.description}</Typography>
         <div className="buttons-container">
-          <Button variant="contained" color="primary" className="button" onClick={handleAddToCart}>Add to Cart</Button>
-          <Button variant="contained" color="secondary" className="button" onClick={handleBuyNow}>Buy Now</Button>
+          <Button variant="contained" color="primary" className="button" onClick={() => handleAddToCart(product)}>Add to Cart</Button>
+          <Button variant="contained" color="primary" className="button" onClick={handleBuyNow}>Buy Now</Button>
         </div>
       </Box>
       <SnackbarComponent

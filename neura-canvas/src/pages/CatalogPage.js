@@ -4,7 +4,10 @@ import SnackbarComponent from '../components/SnackbarComponent';
 import { Masonry } from '@mui/lab';
 import {
     CardContent, CardActions, Typography, Button,
-    Box, Paper, useTheme, useMediaQuery } from '@mui/material';
+    Box, Paper, useTheme, useMediaQuery, Tabs, Tab, AppBar, TextField
+} from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
+import InputAdornment from '@mui/material/InputAdornment';
 import '../styles/CatalogPage.css';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
@@ -25,6 +28,15 @@ const useColumns = () => {
     return isXs ? 1 : isSm ? 2 : isMd ? 3 : isLg ? 4 : 5;
 };
 
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+const shuffledProducts = shuffleArray([...products]);
+
 /**
  * Renders a catalog of digital art images with their respective details and actions.
  * 
@@ -32,8 +44,15 @@ const useColumns = () => {
  */
 const CatalogPage = () => {
     const { addCartItem } = useContext(CartContext);
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
     const columns = useColumns();
-    const [snackbarOpen, setSnackbarOpen] = useState(false); // State for controlling Snackbar visibility
+
+    const filteredProducts = shuffledProducts
+        .filter((product) => !selectedCategory || product.type === selectedCategory)
+        .filter((product) => product.name.toLowerCase().includes(searchTerm) || product.type.toLowerCase().includes(searchTerm));
+
 
     const handleAddToCart = (product) => {
         addCartItem(product);
@@ -45,8 +64,43 @@ const CatalogPage = () => {
             <Typography variant="h3" className="catalog-title">
                 Explore Our Collection
             </Typography>
+            {/* Category selection */}
+
+
+            <AppBar position="static" color="neutral" className="categories-container">
+                <Box display="flex" justifyContent="space-between" alignItems="center">
+
+                    <Tabs value={selectedCategory} onChange={(e, newValue) => setSelectedCategory(newValue)} indicatorColor="primary" textColor="primary">
+                        <Tab label="All" value={null} />
+                        <Tab label="Digital Art" value="Digital Art" />
+                        <Tab label="Patterns" value="Pattern" />
+                        <Tab label="Realistic Photos" value="Realistic Photos" />
+                    </Tabs>
+                    <Box width={{ xs: '100%', sm: '50%', md: '20%' }} className="search-container">
+                        <TextField
+                            className="search-input"
+                            label="Search"
+                            variant="outlined"
+                            fullWidth
+                            placeholder="Search by name or type"
+                            onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
+                            InputProps={{
+                                startAdornment: (
+                                    <InputAdornment position="start">
+                                        <SearchIcon />
+                                    </InputAdornment>
+                                ),
+                            }}
+                        />        
+                    </Box>
+                </Box>
+            </AppBar>
+
+
+
+            {/* Display products */}
             <Masonry columns={columns} spacing={2}>
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                     <Paper className="catalog-card" key={product.id}>
                         <Link to={`/product/${product.id}`}>
                             <img src={product.src} alt={product.alt} className="catalog-image" />

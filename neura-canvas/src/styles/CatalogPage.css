@@ -1,10 +1,18 @@
+.catalog-container {
+    width: 95%;
+    margin: auto;
+    margin-left: 3%;
+    padding: auto;
+}
+
 .catalog-card {
     background-color: #fff;
     border: 1px solid #e0e0e0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     text-align: center;
-    overflow: hidden; /* Prevent content from overflowing the card */
+    overflow: hidden;
+    /* Prevent content from overflowing the card */
 }
 
 .catalog-title {
@@ -27,7 +35,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap if necessary */
 }
 
 .catalog-actions button {
@@ -61,7 +70,7 @@
     background-color: var(--secondary-color);
 }
 
-.product-title{
+.product-title {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -77,7 +86,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background-color: rgba(0, 128, 0, 0.9);  /* green with slight transparency */
+    background-color: rgba(0, 128, 0, 0.9);
+    /* green with slight transparency */
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -87,4 +97,26 @@
 
 .added-confirmation.show {
     transform: translate(-50%, -50%) scale(1);
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 99% !important;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .search-input {
+        width: 100%;
+    }
 }
