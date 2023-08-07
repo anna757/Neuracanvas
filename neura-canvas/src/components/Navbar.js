@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { CartContext } from '../context/CartContext';
@@ -13,7 +13,8 @@ import '../styles/Navbar.css';
 
 const Navbar = React.memo(() => {
   const cartButtonRef = useRef(null);
-  const { isLoggedIn, logOut, loginModalOpen, openLoginModal, closeLoginModal } = useContext(AuthContext);
+  const { isLoggedIn, logOut, loginModalOpen, 
+    openLoginModal, closeLoginModal } = useContext(AuthContext);
   const { cartItems, isCartOpen, setIsCartOpen } = useContext(CartContext);
 
   return (

@@ -2,17 +2,35 @@ import React, { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
-import { Button, List, ListItem, ListItemText, ListItemAvatar, 
-    Avatar, IconButton, Popover, Divider, Typography } from '@mui/material';
+import {
+    Button, List, ListItem, ListItemText, ListItemAvatar,
+    Avatar, IconButton, Popover, Divider, Typography
+} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 import '../styles/Cart.css'
 
+/**
+ * Renders a shopping cart component.
+ *
+ * @param {object} anchorEl - The anchor element to which the cart component is attached.
+ * @return {JSX.Element} The rendered cart component.
+ */
 const Cart = ({ anchorEl }) => {
-    const { cartItems, isCartOpen, setIsCartOpen, handleRemoveItem, handleAdjustQuantity } = useContext(CartContext);
+    const { cartItems, isCartOpen, setIsCartOpen, 
+        handleRemoveItem, handleAdjustQuantity } = useContext(CartContext);
     const { isLoggedIn, openLoginModal } = useContext(AuthContext);
     const navigate = useNavigate();
-    const checkoutButtonContent = isLoggedIn ? 'Proceed to Checkout' : 'Login to Checkout';
+
+    /**
+     * Handles the checkout process.
+     * Navigates to the checkout page if the user is logged in
+     * Asks the user to login otherwise
+     * @param {type} paramName - description of parameter
+     * @return {type} description of return value
+     */
     const handleCheckout = () => {
         if (isLoggedIn) {
             navigate("/checkout");
@@ -21,12 +39,10 @@ const Cart = ({ anchorEl }) => {
         }
     };
 
-
     const handleClose = () => {
         setIsCartOpen(false);
     };
 
-    console.log(cartItems)
     return (
         <Popover
             open={isCartOpen}
@@ -48,6 +64,12 @@ const Cart = ({ anchorEl }) => {
                 </Typography>
             ) : (
                 <>
+                    {
+                    /* Loop through the items added to cart
+                        and display them in a list. 
+                        The list item contains the item name, price, quantity, and remove button.
+                        As well as a checkout button */
+                    }
                     <List>
                         {cartItems.map((item, index) => (
                             <div key={index}>
@@ -75,11 +97,7 @@ const Cart = ({ anchorEl }) => {
                                             size="small">
                                             <AddIcon />
                                         </IconButton>
-                                        <Button
-                                            variant="outlined"
-                                            size="small"
-                                            color="error"
-                                            onClick={() => handleRemoveItem(index)}>Remove</Button>
+                                        <IconButton onClick={() => handleRemoveItem(index)}><DeleteIcon /></IconButton>
                                     </div>
                                 </ListItem>
                                 <Divider />
@@ -87,13 +105,13 @@ const Cart = ({ anchorEl }) => {
                         ))}
                     </List>
                     <div className="cart-footer">
-                        
+
                         <Button
                             variant="contained"
                             color="primary"
                             className="checkout-button"
                             onClick={handleCheckout}>
-                            {checkoutButtonContent}
+                            {isLoggedIn ? 'Proceed to Checkout' : 'Login to Checkout'}
                         </Button>
 
                     </div>
