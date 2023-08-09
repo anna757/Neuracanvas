@@ -11,7 +11,9 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
-
+    const clearCart = () => {
+        setCartItems([]); 
+      };
     /**
      * Adds a new item to the cart or updates the quantity if the item already exists.
      *
@@ -74,7 +76,8 @@ export const CartProvider = ({ children }) => {
             setIsCartOpen,
             addCartItem,
             handleAdjustQuantity,
-            handleRemoveItem
+            handleRemoveItem,
+            clearCart
         }}
         >
             {children}

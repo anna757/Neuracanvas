@@ -21,7 +21,7 @@ import '../styles/Cart.css'
 const Cart = ({ anchorEl }) => {
     const { cartItems, isCartOpen, setIsCartOpen, 
         handleRemoveItem, handleAdjustQuantity } = useContext(CartContext);
-    const { isLoggedIn, openLoginModal } = useContext(AuthContext);
+    const { isLoggedIn, openLoginModal, setRedirectToCheckout } = useContext(AuthContext);
     const navigate = useNavigate();
 
     /**
@@ -35,7 +35,9 @@ const Cart = ({ anchorEl }) => {
         if (isLoggedIn) {
             navigate("/checkout");
         } else {
+            setRedirectToCheckout(true);
             openLoginModal();
+            handleClose();
         }
     };
 

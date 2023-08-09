@@ -11,7 +11,8 @@ import SnackbarComponent from '../components/SnackbarComponent';
 import '../styles/CheckoutPage.css';
 
 const CheckoutPage = () => {
-    const { cartItems, handleAdjustQuantity, handleRemoveItem } = useContext(CartContext);
+    const { cartItems, handleAdjustQuantity, 
+        handleRemoveItem, clearCart } = useContext(CartContext);
     const { isLoggedIn, openLoginModal } = useContext(AuthContext);
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [emptyCartAlert, setEmptyCartAlert] = useState(false);
@@ -37,8 +38,8 @@ const CheckoutPage = () => {
 
         // Check if the form is valid
         if (e.target.checkValidity()) {
+            clearCart();
             setOrderPlaced(true);
-            // Logic to handle placing the order goes here
         }
     };
 

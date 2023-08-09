@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Modal, Typography, Button, TextField, useTheme, } from '@mui/material';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/LoginModal.css'
@@ -7,21 +8,26 @@ import '../styles/LoginModal.css'
 
 const LoginModal = ({ open, handleClose }) => {
     const theme = useTheme();
-    const { logIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const { logIn, redirectToCheckout, setRedirectToCheckout } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
     const handleLogin = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         if (username === 'user' && password === 'password') {
-            logIn();
-            handleClose();
-            document.activeElement.blur();
+          logIn();
+          handleModalClose();
+          document.activeElement.blur();
+          if (redirectToCheckout) {
+            navigate("/checkout");
+            setRedirectToCheckout(false); // Reset the redirect state
+          }
         } else {
-            setErrorMessage('Invalid username or password!');
+          setErrorMessage('Invalid username or password!');
         }
-    };
+      };
 
     const handleModalClose = () => {
         setErrorMessage('');

@@ -12,7 +12,7 @@ const DetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const { addCartItem } = useContext(CartContext);
-  const { isLoggedIn, openLoginModal } = useContext(AuthContext);
+  const { isLoggedIn, openLoginModal, setRedirectToCheckout } = useContext(AuthContext);
   const product = products.find((p) => p.id === parseInt(id));
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
@@ -27,6 +27,7 @@ const DetailsPage = () => {
       addCartItem(product);
       navigate("/checkout");
     } else {
+      setRedirectToCheckout(true)
       openLoginModal();
     }
   };
