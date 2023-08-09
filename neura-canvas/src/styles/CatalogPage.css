@@ -1,3 +1,15 @@
+/**
+ * Styles for the catalog page.
+ * 
+ * The .catalog-container class sets the width and margins for the container of the catalog cards.
+ * 
+ * The .catalog-card class sets the background color, border, box shadow, border radius, text alignment, and overflow for each catalog card.
+ * 
+ * The .catalog-title class sets the margins, padding, and text alignment for the title of each catalog card.
+ * 
+ * The .catalog-image class sets the width, height, padding, margins, and maximum height for the image of each catalog card.
+ */
+
 .catalog-container {
     width: 95%;
     margin: auto;
@@ -7,9 +19,9 @@
 
 .catalog-card {
     background-color: #fff;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border: 0.063rem solid #e0e0e0;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.625rem;
     text-align: center;
     overflow: hidden;
     /* Prevent content from overflowing the card */
@@ -42,9 +54,9 @@
 .catalog-actions button {
     background-color: var(--primary-color);
     color: var(--neutral-color);
-    padding: 8px 16px;
+    padding: 0.5 1rem;
     font-size: 0.9rem;
-    border-radius: 5px;
+    border-radius: 0.625rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
     margin-bottom: 0.5rem;
@@ -56,13 +68,13 @@
 }
 
 .catalog-item p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
 }
 
 .catalog-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.25rem 0.5 rgba(0, 0, 0, 0.1);
 }
 
 .catalog-actions button:hover {
@@ -89,8 +101,8 @@
     background-color: rgba(0, 128, 0, 0.9);
     /* green with slight transparency */
     color: white;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
     z-index: 2000;
     transition: transform 0.5s;
 }
@@ -107,10 +119,10 @@
 }
 
 .search-input {
-    padding: 10px;
+    padding: 0.625rem;
     font-size: 1rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
+    border: 0.063rem solid #e0e0e0;
+    border-radius: 0.625rem;
     margin-bottom: 1rem;
     width: 100%;
 }

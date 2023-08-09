@@ -1,11 +1,17 @@
+/**
+ * Defines the styles for the navigation bar, including the background color and logo.
+ * Also defines the styles for the link buttons, including their color and hover state.
+ * The active link button has a different color to indicate the current page.
+ *
+ */
 .navbar {
     background-color: #EBF5FB;
     position: static;
 }
 
 #logo {
-    max-height: 40px;
-    padding: 10px 0;
+    max-height: 0.625rem;
+    padding: 0.625rem 0;
 }
 
 .LinkButton {

@@ -4,6 +4,11 @@ import CatalogPage from './pages/CatalogPage';
 import DetailsPage from './pages/DetailsPage';
 import CheckoutPage from './pages/CheckoutPage';
 
+/**
+ * Defines the main routes for the application.
+ * Includes paths for the home page, catalog, product details, and checkout.
+ * @returns {JSX.Element} The rendered routes.
+ */
 const AppRoutes = () => {
   return (
     <Routes>

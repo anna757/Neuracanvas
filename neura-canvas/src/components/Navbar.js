@@ -10,7 +10,11 @@ import Cart from './Cart';
 import LoginModal from './LoginModal';
 import '../styles/Navbar.css';
 
-
+/**
+ * Navigation bar component.
+ * Includes links to different pages, cart button, login/logout button, and the cart and login modals.
+ * @returns {JSX.Element} The rendered component.
+ */
 const Navbar = React.memo(() => {
   const cartButtonRef = useRef(null);
   const { isLoggedIn, logOut, loginModalOpen, 

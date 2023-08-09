@@ -1,34 +1,45 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Modal, Typography, Button, TextField, useTheme, } from '@mui/material';
+import { Modal, Typography, Button, TextField } from '@mui/material';
 import { AuthContext } from '../context/AuthContext';
 import '../styles/LoginModal.css'
 
 
 
 const LoginModal = ({ open, handleClose }) => {
-    const theme = useTheme();
     const navigate = useNavigate();
     const { logIn, redirectToCheckout, setRedirectToCheckout } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
 
+    /**
+     * Handles the login process.
+     *
+     * @param {Event} e - The event object.
+     * @return {void} 
+     */
     const handleLogin = (e) => {
         e.preventDefault();
         if (username === 'user' && password === 'password') {
-          logIn();
-          handleModalClose();
-          document.activeElement.blur();
-          if (redirectToCheckout) {
-            navigate("/checkout");
-            setRedirectToCheckout(false); // Reset the redirect state
-          }
+            logIn();
+            handleModalClose();
+            document.activeElement.blur();
+            if (redirectToCheckout) {
+                navigate("/checkout");
+                setRedirectToCheckout(false); // Reset the redirect state
+            }
         } else {
-          setErrorMessage('Invalid username or password!');
+            setErrorMessage('Invalid username or password!');
         }
-      };
+    };
 
+    /**
+     * Sets the error message, username, and password to empty strings
+     * and closes the modal.
+     *
+     * @return {void} 
+     */
     const handleModalClose = () => {
         setErrorMessage('');
         setUsername('');
@@ -51,7 +62,7 @@ const LoginModal = ({ open, handleClose }) => {
                     variant="outlined"
                     onChange={e => setUsername(e.target.value)}
                     required
-                    sx={{ margin: '15px 0' }}
+                    sx={{ my: '0.625rem' }}
                     error={!!errorMessage}
                 />
                 <TextField
@@ -65,19 +76,10 @@ const LoginModal = ({ open, handleClose }) => {
                     helperText={errorMessage}
                 />
                 <Button
+                    className="modal-button"
                     type="submit"
                     onClick={handleLogin}
                     color="primary"
-                    sx={{
-                        backgroundColor: theme.palette.primary.main,
-                        alignItems: 'center',
-                        color: 'white',
-                        marginTop: '10px',
-                        borderRadius: '5px',
-                        '&:hover': {
-                            backgroundColor: 'var(--secondary-color)'
-                        }
-                    }}
                 >Login
                 </Button>
             </form>

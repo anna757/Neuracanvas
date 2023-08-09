@@ -41,10 +41,8 @@ export const CartProvider = ({ children }) => {
      * @return {void} This function does not return a value.
      */
     const handleRemoveItem = (index) => {
-        const newCartItems = [...cartItems];
-        newCartItems[index].removing = true;
-        newCartItems.splice(index, 1);
-        setCartItems(newCartItems);
+        // Remove the item at the specified index
+        setCartItems(prevItems => prevItems.filter((_, i) => i !== index));
     };
 
     /**

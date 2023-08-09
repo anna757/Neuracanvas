@@ -46,9 +46,7 @@
     align-self: flex-start;
     /* Align the button to the end */
     padding: 0;
-    /* Remove padding if needed */
     margin-right: 10%;
-    /* Remove margin if needed */
 }
 
 /* Move order summary a bit to the bottom and bigger gap between order summary and checkout */
@@ -64,8 +62,8 @@
 }
 
 .order-summary-item img {
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     object-fit: cover;
     border-radius: 5%;
 }
@@ -86,32 +84,28 @@
 
 
 .MuiSelect-root {
-    width: 50px;
-    /* Adjust width as needed */
-    font-size: 14px;
-    /* Adjust font size as needed */
-    padding: 0 5px;
-    /* Add padding to create space */
+    width: 3.125rem;
+    font-size: 0.875rem;
+    padding: 0 0.625rem;
 }
 
 .MuiSelect-select {
-    padding: 4px 24px 4px 8px;
-    /* Adjust padding for select content */
+    padding: 0.25rem 24px 0.25rem 0.5;
 }
 
 .MuiSelect-icon {
-    top: calc(50% - 12px);
+    top: calc(50% - 0.75rem);
     /* Center the dropdown arrow */
     color: #000;
     /* Adjust color of the dropdown arrow */
 }
 
 .MuiMenuItem-root {
-    font-size: 14px;
+    font-size: 0.875rem;
     /* Adjust font size for menu items */
-    padding: 4px 10px;
+    padding: 0.25rem 0.625rem;
     /* Adjust padding for menu items */
-    min-height: 30px;
+    min-height: 1.875rem;
     /* Adjust minimum height for menu items */
 }
 
@@ -137,7 +131,7 @@
     margin: 2rem 0;
     width: 30%;
     /* Adjust this width as needed */
-    height: 50px;
+    height: 3.125rem;
     font-size: 1.2rem;
     background-color: var(--secondary-color) !important;
     color: white !important;
@@ -159,8 +153,8 @@
 .catalog-link {
     margin-left: auto; /* Push to the right */
     text-align: center; /* Center text */
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
     color: var(--secondary-color) !important;
     text-decoration: none !important;
 }
@@ -185,8 +179,8 @@
     }
 
     .order-summary-item img {
-        width: 40px;
-        height: 40px;
+        width: 0.625rem;
+        height: 0.625rem;
     }
 }
 

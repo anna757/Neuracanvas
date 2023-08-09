@@ -9,7 +9,6 @@ import {
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import DeleteIcon from '@mui/icons-material/Delete';
-
 import '../styles/Cart.css'
 
 /**
@@ -28,8 +27,6 @@ const Cart = ({ anchorEl }) => {
      * Handles the checkout process.
      * Navigates to the checkout page if the user is logged in
      * Asks the user to login otherwise
-     * @param {type} paramName - description of parameter
-     * @return {type} description of return value
      */
     const handleCheckout = () => {
         if (isLoggedIn) {
@@ -61,7 +58,7 @@ const Cart = ({ anchorEl }) => {
         >
             {cartItems.length === 0 ? (
                 <Typography
-                    style={{ padding: '1rem' }}>
+                    sx={{ p: 1 }}>
                     Your cart is empty
                 </Typography>
             ) : (
@@ -74,7 +71,7 @@ const Cart = ({ anchorEl }) => {
                     }
                     <List>
                         {cartItems.map((item, index) => (
-                            <div key={index}>
+                            <div key={item.id}>
                                 <ListItem>
                                     <ListItemAvatar>
                                         <Avatar

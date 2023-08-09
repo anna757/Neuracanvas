@@ -10,6 +10,11 @@ import SnackbarComponent from '../components/SnackbarComponent';
 
 import '../styles/CheckoutPage.css';
 
+/**
+ * Renders the CheckoutPage component.
+ *
+ * @return {JSX.Element} The rendered CheckoutPage component.
+ */
 const CheckoutPage = () => {
     const { cartItems, handleAdjustQuantity, 
         handleRemoveItem, clearCart } = useContext(CartContext);
@@ -17,6 +22,11 @@ const CheckoutPage = () => {
     const [orderPlaced, setOrderPlaced] = useState(false);
     const [emptyCartAlert, setEmptyCartAlert] = useState(false);
 
+    /**
+     * Calculates the total amount for all items in the cart.
+     *
+     * @return {number} The total amount.
+     */
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     };
@@ -28,6 +38,12 @@ const CheckoutPage = () => {
         }
     }, [isLoggedIn, openLoginModal]);
 
+    /**
+     * Handles the place order event.
+     *
+     * @param {Event} e - The event object.
+     * @return {void} Does not return anything.
+     */
     const handlePlaceOrder = (e) => {
         e.preventDefault();
 
@@ -50,7 +66,9 @@ const CheckoutPage = () => {
                 Checkout
             </Typography>
 
-            {/* Order Summary */}
+            {/* Order Summary 
+                This section shows the cart items, their details. 
+                The user can adjust the quantity or remove items. */}
             <div className="order-summary-section">
                 <Typography variant="h5">Order Summary</Typography>
                 <div className="order-summary">
@@ -60,7 +78,7 @@ const CheckoutPage = () => {
                         </Typography>
                     ) : (
                         cartItems.map((item, index) => (
-                            <div key={index} className="order-summary-item">
+                            <div key={item.id} className="order-summary-item">
                                 <div className="product-details">
                                     <img src={item.src} alt={item.name} />
                                     <div className="product-info">
@@ -77,7 +95,7 @@ const CheckoutPage = () => {
                                 <Select
                                     value={item.quantity}
                                     onChange={(e) => handleAdjustQuantity(index, e.target.value - item.quantity)}
-                                    MenuProps={{ PaperProps: { style: { width: '40px' } } }}
+                                    MenuProps={{ PaperProps: { style: { width: '0.625rem' } } }}
                                 >
                                     {[...Array(10).keys()].map((_, i) => (
                                         <MenuItem value={i + 1} key={i + 1}>
@@ -99,7 +117,7 @@ const CheckoutPage = () => {
 
             <Divider className="divider-gap" />
             <form onSubmit={handlePlaceOrder} >
-                {/* Shipping Information */}
+                {/* Shipping Information Form */}
                 <Typography variant="h5">Shipping Information</Typography>
                 <TextField label="Full Name" variant="outlined" required />
                 <TextField label="Address Line 1" variant="outlined" required />
@@ -108,7 +126,7 @@ const CheckoutPage = () => {
                 <TextField label="State" variant="outlined" required />
                 <TextField label="Zip Code" variant="outlined" required />
                 <Divider className="divider-gap" />
-                {/* Payment Information */}
+                {/* Payment Information Form */}
                 <Typography variant="h5">Payment Information</Typography>
                 <TextField label="Credit Card Number" variant="outlined" required />
                 <TextField label="Cardholder Name" variant="outlined" required />
@@ -121,6 +139,8 @@ const CheckoutPage = () => {
                     Place Order for ${calculateTotal().toFixed(2)}
                 </Button>
             </form>
+            {/* Either show a success message when the order is placed successfully, 
+                or show a warning message when the cart is empty and the order cannot be placed.*/}
             <SnackbarComponent
                 open={orderPlaced}
                 handleClose={() => setOrderPlaced(false)}

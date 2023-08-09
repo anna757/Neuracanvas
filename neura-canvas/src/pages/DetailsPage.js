@@ -8,6 +8,14 @@ import SnackbarComponent from '../components/SnackbarComponent';
 
 import '../styles/DetailsPage.css';
 
+
+/**
+ * Shows product details
+ * Displays the Name of the product, a big image, the category and price
+ * Includes an add to cart button or a checkout button.
+ * @param {Object} product - The product to be viewed.
+ * @return {JSX.Element} The JSX element for the product detail page
+ */
 const DetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -17,11 +25,21 @@ const DetailsPage = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
 
+  /**
+   * Handles adding a product to the cart.
+   *
+   * @param {Object} product - The product to be added to the cart.
+   */
   const handleAddToCart = (product) => {
     addCartItem(product);
     setSnackbarOpen(true);
   };
 
+  /**
+   * Handles the "Buy Now" functionality.
+   *
+   * @return {undefined} This function does not return a value.
+   */
   const handleBuyNow = () => {
     if (isLoggedIn) {
       addCartItem(product);

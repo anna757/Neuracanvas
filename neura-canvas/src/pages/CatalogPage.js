@@ -28,6 +28,26 @@ const useColumns = () => {
     return isXs ? 1 : isSm ? 2 : isMd ? 3 : isLg ? 4 : 5;
 };
 
+/**
+ * Filters the given array of products based on the selected category and search term.
+ *
+ * @param {Array} products - The array of products to be filtered.
+ * @param {string} selectedCategory - The selected category to filter the products by.
+ * @param {string} searchTerm - The search term to filter the products by.
+ * @return {Array} - The filtered array of products.
+ */
+const useFilteredProducts = (products, selectedCategory, searchTerm) => {
+    return products
+        .filter((product) => !selectedCategory || product.type === selectedCategory)
+        .filter((product) => product.name.toLowerCase().includes(searchTerm) || product.type.toLowerCase().includes(searchTerm));
+};
+
+/**
+ * Shuffles the elements of an array randomly.
+ * This is used to display random order of the images in the catalog
+ * @param {Array} array - The array to be shuffled.
+ * @return {Array} - The shuffled array.
+ */
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -35,11 +55,13 @@ const shuffleArray = (array) => {
     }
     return array;
 }
+
 const shuffledProducts = shuffleArray([...products]);
 
 /**
  * Renders a catalog of digital art images with their respective details and actions.
- * 
+ * Includes categories for the images
+ * Includes search functionality
  * @returns {JSX.Element} The catalog page component.
  */
 const CatalogPage = () => {
@@ -48,15 +70,16 @@ const CatalogPage = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
     const columns = useColumns();
+    const filteredProducts = useFilteredProducts(shuffledProducts, selectedCategory, searchTerm);
 
-    const filteredProducts = shuffledProducts
-        .filter((product) => !selectedCategory || product.type === selectedCategory)
-        .filter((product) => product.name.toLowerCase().includes(searchTerm) || product.type.toLowerCase().includes(searchTerm));
-
-
+    /**
+     * Function to handle adding a product to the cart.
+     *
+     * @param {Object} product - The product object to be added to the cart.
+     */
     const handleAddToCart = (product) => {
         addCartItem(product);
-        setSnackbarOpen(true); // Show the Snackbar
+        setSnackbarOpen(true);
     };
 
     return (
@@ -64,9 +87,11 @@ const CatalogPage = () => {
             <Typography variant="h3" className="catalog-title">
                 Explore Our Collection
             </Typography>
-            {/* Category selection */}
-
-
+            
+            {/* Category selection + Search
+                Renders a search bar and a set of tabs for different categories. 
+                The AppBar component represents a navigation bar at the top of the screen. 
+                Inside the AppBar, there is a Box component that contains the search bar and the tabs. */}
             <AppBar position="static" color="neutral" className="categories-container">
                 <Box display="flex" justifyContent="space-between" alignItems="center">
 
@@ -96,9 +121,11 @@ const CatalogPage = () => {
                 </Box>
             </AppBar>
 
-
-
-            {/* Display products */}
+            {/* Display products usingfilteredProducts array to map over each product and create a Paper component for each one. 
+                Each Paper component contains an image, product details (name, type, price), and two buttons: "View Product" and "Add to Cart." 
+                The handleAddToCart function is called when the "Add to Cart" button is clicked. 
+                The products are displayed in a masonry layout using the Masonry component.
+            */}
             <Masonry columns={columns} spacing={2}>
                 {filteredProducts.map((product) => (
                     <Paper className="catalog-card" key={product.id}>
@@ -136,6 +163,8 @@ const CatalogPage = () => {
                     </Paper>
                 ))}
             </Masonry>
+            
+            {/* Notification for successful add to cart */}
             <SnackbarComponent
                 open={snackbarOpen}
                 handleClose={() => setSnackbarOpen(false)}
@@ -143,9 +172,9 @@ const CatalogPage = () => {
                 severity="success"
                 message="Added to cart!"
             />
-
         </Box>
     );
 };
+
 
 export default CatalogPage;

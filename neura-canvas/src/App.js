@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
-import { CartProvider } from './context/CartContext'; // Import the CartProvider
+import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from '@emotion/react';
 import theme from './styles/theme';
 import Navbar from './components/Navbar';
@@ -15,7 +15,7 @@ import AppRoutes from './AppRoutes';
 const App = () => {
   return (
     <AuthProvider>
-      <CartProvider> 
+      <CartProvider>
         <ThemeProvider theme={theme}>
           <Router>
             <Navbar />
