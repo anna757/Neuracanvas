@@ -11,11 +11,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.813rem;  /* Increased padding */
+    padding: 2.5rem;  
     margin: auto;
     top: 30%;
     background-color: #fff;
-    width: 20rem;  /* Increased width */
+    width: 20rem; 
     border-radius: 0.625rem;
     box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
     position: relative; 
@@ -23,6 +23,8 @@
 
 .modal-input {
     width: 100%;
+    margin-top: 0.7rem !important;
+    margin-bottom: 0.4rem !important;
 }
 
 .modal-form {
@@ -31,11 +33,11 @@
 
 .modal-button {
     align-items: center;
-    color: white;
-    margin-top: 0.625rem;
-    border-radius: 0.625rem;
-    background-color: var(--primary-color);
+    color: white !important;
+    margin-top: 0.8rem !important;
+    border-radius: 0.5rem !important;
+    background-color: var(--primary-color) !important;
     &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-color) !important;
     }
 }

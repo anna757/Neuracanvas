@@ -84,10 +84,6 @@ const CatalogPage = () => {
 
     return (
         <Box className="catalog-container">
-            <Typography variant="h3" className="catalog-title">
-                Explore Our Collection
-            </Typography>
-            
             {/* Category selection + Search
                 Renders a search bar and a set of tabs for different categories. 
                 The AppBar component represents a navigation bar at the top of the screen. 

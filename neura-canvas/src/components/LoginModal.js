@@ -54,7 +54,7 @@ const LoginModal = ({ open, handleClose }) => {
             disableRestoreFocus
         >
             <form className="modal-container" onSubmit={handleLogin}>
-                <Typography variant="h5">Sign in to NeuraCanvas</Typography>
+                <Typography variant="h5" sx={{mb: "10px"}}>Sign in to NeuraCanvas</Typography>
                 <TextField
                     autoFocus
                     className="modal-input"
@@ -62,7 +62,6 @@ const LoginModal = ({ open, handleClose }) => {
                     variant="outlined"
                     onChange={e => setUsername(e.target.value)}
                     required
-                    sx={{ my: '0.625rem' }}
                     error={!!errorMessage}
                 />
                 <TextField
