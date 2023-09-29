@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from 'react';
 
 const AuthContext = createContext();
 
@@ -15,12 +15,6 @@ const AuthProvider = ({ children }) => {
 
   const openLoginModal = () => setLoginModalOpen(true);
   const closeLoginModal = () => setLoginModalOpen(false);
-
-  // Initialize login status from localStorage
-  useEffect(() => {
-    const storedLoginStatus = localStorage.getItem('isLoggedIn');
-    setIsLoggedIn(storedLoginStatus === 'true');
-  }, []);
 
   const logIn = () => {
     localStorage.setItem('isLoggedIn', 'true');
